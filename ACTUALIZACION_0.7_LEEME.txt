@@ -1,0 +1,11 @@
+ZIGZAG 0.7 - Actualización para subir al repositorio y desplegar
+
+1. Descomprime el ZIP.
+2. Sube el CONTENIDO de esta carpeta a la raíz de tu repositorio ZIGZAG, reemplazando los archivos del mismo nombre.
+3. El hosting/build debe ejecutar npm install y npm run build (Vite + React).
+4. Abre la URL pública HTTPS desde el celular. En Chrome Android: menú > Añadir a pantalla de inicio / Instalar app.
+5. El botón Compartir app comparte la URL publicada. No sirve para enviar una app instalable mientras no esté publicada.
+
+INCLUYE: código completo de la app 0.6.5, nuevo icono del zorrito Ziggy, paleta violeta, botón Compartir app, manifest PWA.
+NO INCLUYE: APK compilado, inicio de sesión Supabase, Ziggy IA real activada. El endpoint remoto de chat sigue deshabilitado hasta validar autenticación y límites.
+NO SUBIR: credenciales, archivos JSON secretos de Google ni claves de OpenAI.
