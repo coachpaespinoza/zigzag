@@ -7,11 +7,9 @@ name: Generar APK ZIGZAG
     branches:
       - main
 
-
 jobs:
   build-android:
     runs-on: ubuntu-latest
-
     permissions:
       contents: read
 
@@ -27,7 +25,7 @@ jobs:
       - name: Configurar Java
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
+          distribution: temurin
           java-version: '21'
 
       - name: Configurar Android SDK
@@ -45,13 +43,12 @@ jobs:
       - name: Sincronizar Android
         run: npx cap sync android
 
-      - name: Generar APK de pruebas
+      - name: Generar APK
         working-directory: android
         run: chmod +x gradlew && ./gradlew assembleDebug
 
-      - name: Publicar APK para descargar
+      - name: Guardar APK
         uses: actions/upload-artifact@v4
         with:
           name: ZIGZAG-Android-APK
           path: android/app/build/outputs/apk/debug/app-debug.apk
-
