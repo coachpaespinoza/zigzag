@@ -65,3 +65,111 @@ header{height:76px;border-bottom:1px solid #ece5f1;background:var(--paper);paddi
 .zigzag-backup p{margin:3px 0;line-height:1.4}.zigzag-backup button{border:0;border-radius:9px;background:#6942a5;color:white;padding:10px;font-weight:650;cursor:pointer}
 .zigzag-backup label{display:grid;gap:4px;font-weight:600}.zigzag-backup input{max-width:100%;font-size:12px}
 @media(max-width:440px){.zigzag-backup{bottom:115px;right:8px}}
+
+
+/* ZIGZAG · ajuste móvil audio y accesos Ziggy · 31-10-2026 */
+.app { padding-top: 0; }
+.voice-access {
+  position: sticky; top: 0; left: auto; transform: none;
+  width: 100%; max-width: 560px; margin: 0 auto;
+  z-index: 1000; border-radius: 0; border-left: 0; border-right: 0;
+  border-top: 0; padding: 8px 12px; gap: 6px;
+  flex-wrap: wrap; justify-content: center;
+  box-shadow: 0 3px 12px #24134b14;
+}
+.voice-access-label { display: inline; padding: 0 4px; }
+.voice-access button { min-height: 36px; padding: 8px 10px; }
+.voice-access .voice-speed { display: inline-flex; margin: 0; padding: 0 4px; align-items: center; }
+.voice-access .voice-speed select { width: auto; max-width: 100px; }
+.voice-message { top: 132px; }
+.ziggy-fab { bottom: calc(88px + env(safe-area-inset-bottom)); right: 12px; left: auto; transform: none; max-width: 140px; }
+.ziggy-guide-entry { bottom: calc(148px + env(safe-area-inset-bottom)); right: 12px; max-width: 175px; }
+.ziggy-guide-entry button { max-width: 175px; }
+@media(max-width:440px) {
+  .voice-access { max-width: 100%; gap: 5px; padding: 7px 9px; border-radius: 0; }
+  .voice-access-label { display: none; }
+  .voice-access button { font-size: 12px; padding: 7px 9px; }
+  .voice-access .voice-speed { font-size: 12px; }
+  .voice-access .voice-speed select { max-width: 94px; }
+  .voice-message { top: 145px; }
+  .ziggy-fab { right: 10px; left: auto; transform: none; }
+  .ziggy-guide-entry { right: 10px; bottom: calc(148px + env(safe-area-inset-bottom)); }
+}
+@media(max-width:340px) {
+  .voice-access { justify-content: flex-start; }
+  .voice-access .voice-speed { flex: 1; justify-content: center; }
+  .ziggy-guide-entry button { max-width: 135px; font-size: 11px; }
+}
+
+/* ZIGZAG 0.5 - conversación IA */
+.ziggy-ai{margin-top:18px;padding-top:16px;border-top:1px solid rgba(100,70,140,.18);max-width:100%;min-width:0}.ziggy-ai-title{font-weight:800;font-size:1rem;color:#5b3b86}.ziggy-ai-title span{font-size:.65rem;background:#eee4fa;border-radius:12px;padding:3px 8px;margin-left:6px}.ziggy-ai-privacy{font-size:.77rem;line-height:1.45;opacity:.8}.ziggy-ai-history{max-height:240px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;margin:12px 0;overflow-wrap:anywhere}.ziggy-ai-history p{margin:0;padding:10px 12px;border-radius:14px;white-space:pre-wrap;font-size:.87rem;line-height:1.45}.ziggy-ai-history strong{display:block;margin-bottom:4px;font-size:.75rem}.ziggy-ai-user{background:#ede3f8;align-self:flex-end;max-width:92%}.ziggy-ai-assistant{background:#f8f5fb;align-self:flex-start;max-width:96%}.ziggy-ai-empty{opacity:.7}.ziggy-ai-error{font-size:.8rem;color:#9c294a}.ziggy-ai-form{display:flex;flex-direction:column;gap:8px}.ziggy-ai-form textarea{width:100%;min-width:0;box-sizing:border-box;border:1px solid #d7c6e7;border-radius:12px;padding:11px;background:#fff;color:#31233b;font:inherit;resize:vertical}.ziggy-ai-form button{align-self:flex-end;border:0;border-radius:20px;background:#7248a6;color:#fff;padding:9px 18px;font-weight:700}.ziggy-ai-form button:disabled{opacity:.45}.ziggy-ai-actions button{border:0;background:transparent;text-decoration:underline;font-size:.75rem;color:inherit;padding:8px 0}.ziggy-dialog{max-height:min(85dvh,750px);overflow-y:auto;overscroll-behavior:contain}@media(max-width:480px){.ziggy-ai-history{max-height:185px}.ziggy-dialog{max-height:78dvh}}
+
+/* Ziggy: pasos sugeridos editables, diseño adaptable */
+.ziggy-step-planner{margin:12px 0;padding:14px;border:1px solid rgba(125,91,170,.25);border-radius:16px;background:rgba(155,120,200,.08)}
+.ziggy-step-planner h3{margin:0 0 5px;font-size:1rem}
+.ziggy-step-planner p{font-size:.85rem;margin:0 0 10px}
+.ziggy-step-edit{display:flex;align-items:center;gap:9px;margin:9px 0;min-width:0}
+.ziggy-step-edit input[type=checkbox]{flex:0 0 auto;width:19px;height:19px;accent-color:#7e56ad}
+.ziggy-step-edit input[type=text]{min-width:0;flex:1;box-sizing:border-box;border-radius:10px;padding:10px;border:1px solid #d6c7e8;background:var(--card,#fff);color:inherit;font:inherit}
+.ziggy-step-feedback{font-size:.85rem;margin:8px 0}
+.ziggy-ai-actions{display:flex;flex-wrap:wrap;gap:8px}
+.ziggy-ai-actions button{white-space:normal;min-height:38px}
+
+/* ZIGZAG 0.6.1 — Memoria explícita y editable de Ziggy */
+.ziggy-memory{padding:12px;margin:12px 0;border:1px solid rgba(130,100,165,.25);border-radius:16px;background:rgba(151,114,194,.07)}
+.ziggy-memory-toggle{display:flex;gap:9px;align-items:flex-start;font-weight:650;font-size:.9rem;line-height:1.35}
+.ziggy-memory-toggle input{width:18px;height:18px;flex-shrink:0;margin-top:2px;accent-color:#7753a8}
+.ziggy-memory-edit{border:1px solid rgba(130,100,165,.4);border-radius:10px;padding:9px 12px;background:transparent;color:inherit;max-width:100%;white-space:normal;text-align:left}
+.ziggy-memory-editor{margin-top:10px;display:grid;gap:9px}
+.ziggy-memory-editor label{display:grid;gap:7px;font-size:.9rem}
+.ziggy-memory-editor textarea{display:block;box-sizing:border-box;width:100%;min-height:78px;border-radius:10px;padding:10px;font:inherit}
+.ziggy-memory-editor .ziggy-ai-actions{flex-wrap:wrap}
+
+/* 0.6.2: Desbloqueo contextual, sin diagnóstico ni acciones automáticas */
+.ziggy-unblock{margin:12px 0;padding:14px;border-radius:16px;background:rgba(128,94,166,.07);border:1px solid rgba(128,94,166,.22)}
+.ziggy-unblock h3{margin:0 0 6px;font-size:1rem}.ziggy-unblock p{margin:0 0 10px;font-size:.88rem;line-height:1.45}
+.ziggy-unblock-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.ziggy-unblock-grid button{padding:10px 8px;border:1px solid rgba(128,94,166,.32);border-radius:12px;background:transparent;color:inherit;white-space:normal;min-height:48px;font:inherit;font-size:.83rem;text-align:center}
+.ziggy-unblock-grid button.selected{background:rgba(128,94,166,.19);border-color:#805ba8;font-weight:700}
+.ziggy-unblock-detail{display:grid;gap:9px;margin-top:12px}.ziggy-unblock-detail label{display:grid;gap:5px;font-size:.85rem}
+.ziggy-unblock-detail input{box-sizing:border-box;width:100%;min-width:0;border-radius:9px;border:1px solid #aaa;padding:10px;font:inherit}
+.ziggy-unblock-detail>button{border-radius:12px;padding:11px 12px;background:#7753a8;color:white;border:0;font-weight:700}
+.ziggy-unblock-detail small{line-height:1.4;opacity:.8}
+@media(max-width:350px){.ziggy-unblock-grid{grid-template-columns:1fr}}
+
+/* 0.6.3 — Ayuda contextual desde Mi Día, sin envío automático */
+.task-ziggy-tools{display:flex;flex-wrap:wrap;gap:6px;width:100%;margin:4px 0 8px}
+.task-ziggy-tools .mini{white-space:normal;text-align:center;line-height:1.3;min-height:36px}
+@media(max-width:430px){.task-ziggy-tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.task-ziggy-tools .mini{min-width:0}}
+
+/* 0.6.4 — Mi Foco flexible y Ziggy contextual */
+.focus-smart{display:grid;gap:10px;margin:14px 0;padding:14px;border-radius:16px;background:rgba(128,94,166,.07);border:1px solid rgba(128,94,166,.22);text-align:left}
+.focus-smart h3{margin:0;font-size:1rem}.focus-smart-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.focus-smart-choices button,.focus-smart-actions button{min-width:0;min-height:40px;white-space:normal;border:1px solid rgba(128,94,166,.35);border-radius:11px;padding:9px;font:inherit;background:transparent;color:inherit}
+.focus-smart-choices button.selected{background:rgba(128,94,166,.2);border-color:#805ba8;font-weight:700}
+.focus-smart-actions{display:flex;flex-wrap:wrap;gap:8px}.focus-smart-actions button{flex:1 1 140px}
+.focus-smart-status{font-size:.9rem;line-height:1.4}
+@media(max-width:350px){.focus-smart-choices{grid-template-columns:1fr}}
+
+/* 0.6.5 — Guía opcional para introducciones en Mi Foco */
+.focus-guide{display:grid;gap:8px}.focus-guide-toggle{padding:11px;border-radius:12px;border:1px solid rgba(128,94,166,.35);background:transparent;color:inherit;font:inherit;text-align:left}
+.focus-guide-steps{display:grid;gap:9px;padding:11px;border-radius:12px;background:rgba(128,94,166,.08)}
+.focus-guide-steps label{display:flex;align-items:flex-start;gap:9px;font-size:.9rem;line-height:1.35}.focus-guide-steps input{width:18px;height:18px;flex-shrink:0;accent-color:#805ba8}
+.focus-guide-steps button{padding:10px;border:0;border-radius:10px;background:#7753a8;color:white;font-weight:650}.focus-guide-steps small{opacity:.8;line-height:1.4}
+
+/* ZIGZAG 0.7: estética violeta adulta y nueva identidad de Ziggy */
+:root{--ziggy-violet:#7f49ce;--ziggy-night:#2b1945}
+body{background:linear-gradient(160deg,#221432 0%,#392351 54%,#68428b 100%)}
+.app{background:linear-gradient(180deg,#fcf9ff 0%,#f5eafa 100%);min-height:100dvh}
+.app>header{background:linear-gradient(110deg,#2d1a48,#543273);color:#fff;border-bottom:1px solid #9e7ac0}
+.app>header .brand{color:#fff!important;font-weight:900;letter-spacing:.02em}
+.app>header .brand small{color:#eadcf7!important}
+.header-actions{display:flex;gap:7px;align-items:center}
+.share-app{background:#e7d4fb;color:#382054;border:1px solid #b996df;border-radius:14px;padding:10px 11px;font-weight:800;font-size:12px;white-space:nowrap;cursor:pointer}
+.share-app:focus-visible{outline:3px solid #f6c8ff}
+.ziggy-fox{width:118px;min-width:118px;height:118px;border-radius:27px;overflow:hidden;box-shadow:0 9px 22px #46276a4d;border:2px solid #d9b6ff}
+.ziggy-fox img{width:100%;height:100%;object-fit:cover}
+.ziggy-intro{background:linear-gradient(115deg,#35204e,#7955a0)!important;color:#fff!important;border-radius:25px!important}
+.ziggy-intro strong,.ziggy-intro p,.ziggy-kicker{color:#fff!important}
+.ziggy-fab{background:linear-gradient(120deg,#58327c,#9761c9)!important;color:white!important;box-shadow:0 6px 20px #46276a66!important}
+@media(max-width:400px){.share-app{font-size:11px;padding:9px 7px}.ziggy-fox{width:92px;min-width:92px;height:92px}}
