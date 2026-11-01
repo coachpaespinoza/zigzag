@@ -1,16 +1,9 @@
-ZIGZAG 0.4.1 — PAQUETE DE FUENTE VERIFICABLE
+ZIGZAG - Actualizacion integrada: icono del zorrito y audio nativo Android.
 
-IMPORTANTE: este ZIP es código fuente, NO un APK.
+Subir los archivos descomprimidos manteniendo rutas: src/main.tsx, package.json, public/icon-512.png, public/icon-192.png, public/manifest.webmanifest, .github/workflows/android-apk.yml.
 
-El APK que enviaste anteriormente contiene el código antiguo: su JS no incluye speechSynthesis ni el módulo de acompañamiento avanzado.
+El APK NO esta compilado ni probado en un telefono. GitHub Actions debe generar el nuevo APK.
 
-PASOS:
-1. Descomprime el ZIP. Abre la carpeta zigzag-app.
-2. Sube TODO el contenido de esa carpeta a la RAÍZ de tu repositorio de GitHub (NO subas la carpeta zigzag-app como una subcarpeta).
-3. Reemplaza src/main.tsx, src/style.css, index.html, package.json y .github/workflows/android-apk.yml, además de los demás archivos.
-4. Verifica en GitHub que src/main.tsx comienza con ZIGZAG_BUILD_ID y que index.html contiene ZIGZAG-0.4.1-VERIFICADA-20261031.
-5. Ve a Actions > Generar APK ZIGZAG 0.4.1 y ejecútalo.
-6. El trabajo FALLARÁ deliberadamente si GitHub sigue teniendo el código antiguo o el APK generado no incluye el identificador de versión.
-7. Solo si todo está verde, descarga el artefacto ZIGZAG-0.4.1-VERIFICADA-Android.
+El audio usa el motor de texto a voz de Android; requiere una voz de español instalada. Ziggy IA real sigue desactivada hasta configurar el backend seguro.
 
-Esta versión contiene código 0.4.1 y todas las anteriores según los archivos de origen. No se ha podido ejecutar npm build localmente porque faltan dependencias descargables en este entorno. GitHub deberá confirmar la compilación.
+No publiques una release hasta comprobar el APK.
